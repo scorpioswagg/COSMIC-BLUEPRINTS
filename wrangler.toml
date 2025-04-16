@@ -1,0 +1,22 @@
+name = "2" # Replace with your worker's name
+main = "dist/index.js" # Path to your worker's entry file
+compatibility_date = "2025-04-16" # Replace with the current date
+
+# Add your account-specific details
+account_id = "d26785988f1fe2e78b788d66dbc2dff6"
+workers_dev = true # Set to false if deploying to custom domain
+
+# Optional: Add bindings or environment variables
+[vars]
+MY_ENV_VAR = "value"
+
+# Optional: KV namespaces
+[[kv_namespaces]]
+binding = "MY_KV_NAMESPACE"
+id = "namespace-id"
+
+# Optional: Durable Objects
+[[durable_objects]]
+binding = "MY_OBJECT"
+class_name = "MyObject"
+script_name = "my-worker" # Optional
